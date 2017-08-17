@@ -21,7 +21,7 @@ function notification() {
     var notificationDate = licenseSheet.getRange(i+1, 16);
     Logger.log(commitment);
     Logger.log(notification);
-    if  ( remainingDays < deadline &&  commitment != "flexible" && notification != "YES"){ //condition - remaining days has to be lower than deadline and commitment has to other than flexible and notification column must not include "YES"
+    if  ( remainingDays < deadline &&  commitment != "flexible" && notification != "YES"){ //condition - remaining days has to be lower than deadline and commitment must not be "flexible" and notification column must not include "YES"
      var lastRowValues = licenseSheet.getRange(i, 1, lastRow, lastColumn).getValues();
      var email = lastRowValues[i][13]; //get email contacts
      var remainingDate = lastRowValues[i][6]; //get remaining date
