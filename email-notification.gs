@@ -44,10 +44,10 @@ function notification() {
       
       notificationCol.setValue("YES"); //sets notification value to YES to NOT sending the email again
       notificationDate.setValue(new Date ()); //sets date when the notification email was sent
-      var notificationPosledni = licenseSheet.getRange(i+1, 16).getValue();
+      var notificationLast = licenseSheet.getRange(i+1, 16).getValue();
       
       var logSheet = ss.getSheetByName("Log-notification"); //log sent email on sheet "Log-notification"
-      logSheet.appendRow([notificationPosledni,email,domain,emailBody]);
+      logSheet.appendRow([notificationLast,email,domain,emailBody]);
     }                        
   }
 }
